@@ -175,7 +175,7 @@ breakpoints.md = breakpoints[1]
 breakpoints.lg = breakpoints[2]
 breakpoints.xl = breakpoints[3]
 
-const show = () => (
+const BioMain = () => (
   <>
     <Container>
       <DarkModeSwitch />
@@ -209,4 +209,4 @@ const show = () => (
   </>
 )
 
-export default show
+export default BioMain

@@ -13,8 +13,8 @@ export const DarkModeSwitch = () => {
       isChecked={isDark}
       onChange={() => {
         toggleColorMode()
-        console.log(colorMode)
-        console.log(toggleColorMode)
+        // console.log(colorMode)
+        // console.log(toggleColorMode)
       }}
     />
   )

@@ -1,17 +1,21 @@
 
 import React from 'react'
-import Box from './box/boxMain'
 import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core'
-export default function ({ children }) {
+
+import BioMain from './bio/bioMain'
+import Es6Function from './es6function'
+
+const Home = ({ children }) => {
   return (
     <>
       <ThemeProvider>
         <ColorModeProvider>
           <CSSReset />
           {children}
-          <Box />
+          <Es6Function />
         </ColorModeProvider>
       </ThemeProvider>
     </>
   )
 }
+export default Home
