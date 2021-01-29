@@ -1,8 +1,8 @@
 import React from 'react'
 import { ThemeProvider, CSSReset, theme, Box, Text } from '@chakra-ui/core'
-import { Container } from '../../components/cometainer'
-import { DarkModeSwitch } from '../../components/Swich'
-import { DarkModeButton } from '../../components/Button'
+import { Container } from '../components/cometainer'
+import { DarkModeSwitch } from '../components/Swich'
+import { DarkModeButton } from '../components/Button';
 
 const bj = '#00CED1'
 

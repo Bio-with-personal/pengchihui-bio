@@ -2,8 +2,9 @@
 import React from 'react'
 import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core'
 
-import BioMain from './bio/bioMain'
+import BioMain from './bioMain'
 import Es6Function from './es6function'
+import EcmaScript from './ecmaScript'
 
 const Home = ({ children }) => {
   return (
@@ -12,7 +13,8 @@ const Home = ({ children }) => {
         <ColorModeProvider>
           <CSSReset />
           {children}
-          <Es6Function />
+          {/*  运行实例   */}
+          <EcmaScript />
         </ColorModeProvider>
       </ThemeProvider>
     </>
