@@ -1,23 +1,56 @@
-
 import React from 'react'
-import { ThemeProvider, CSSReset, ColorModeProvider } from '@chakra-ui/core'
+import Head from 'next/head'
+import Router from 'next/router'
 
-import BioMain from './bioMain'
-import Es6Function from './es6function'
-import EcmaScript from './ecmaScript'
+class Index extends React.Component {
+  static getInitialProps({ req, res }) {
+    if (typeof window === 'undefined' && !res.writeHead) {
+      // This is the SSR mode
+      const host = req.headers['x-forwarded-host'] || req.headers.host
+      if (
+        host === 'localhost:3000' ||
+      ) {
+        return { metaRedirect: '/peng' }
+      } else {
+        return { metaRedirect: '/peng' }
+      }
+    }
 
-const Home = ({ children }) => {
-  return (
-    <>
-      <ThemeProvider>
-        <ColorModeProvider>
-          <CSSReset />
-          {children}
-          {/*  运行实例   */}
-          <EcmaScript />
-        </ColorModeProvider>
-      </ThemeProvider>
-    </>
-  )
+    if (req) {
+      const host = req.headers['x-forwarded-host'] || req.headers.host
+      if (
+        host === 'localhost:3000' ||
+      ) {
+        res.writeHead(302, { Location: '/peng' })
+        res.end()
+      } else {
+        res.writeHead(302, { Location: '/peng' })
+        res.end()
+      }
+    } else {
+      const host = window.location.host
+      if (
+        host === 'localhost:3000' ||
+      ) {
+        Router.push('/peng')
+      } else {
+        Router.push('/peng')
+      }
+    }
+
+    return {}
+  }
+
+  render() {
+    if (this.props.metaRedirect) {
+      return (
+        <Head>
+          <meta httpEquiv='refresh' content={`0; url=${this.props.metaRedirect}`} />
+        </Head>
+      )
+    }
+    return null
+  }
 }
-export default Home
+
+export default Index

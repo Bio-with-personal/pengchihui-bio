@@ -22,9 +22,13 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "emotion-theming": "^10.0.27",
+    "@sentry/node": "^6.0.3",
+    "emotion-theming": "^11.0.0",
+    "formik": "^2.2.6",
     "next": "^9.4.4",
+    "next-seo": "^4.18.0",
     "react": "^16.13.1",
+    "react-datepicker": "^3.4.1",
     "react-dom": "^16.13.1"
   }
 }
