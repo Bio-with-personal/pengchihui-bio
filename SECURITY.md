@@ -97,3 +97,6 @@ include属性
      "include": [
         "src/**/*"
     ]     
+
+ ## 插件
+ sentry  日志监控

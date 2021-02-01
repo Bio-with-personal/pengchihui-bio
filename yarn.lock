@@ -1278,6 +1278,16 @@
   resolved "https://registry.npm.taobao.org/@reach/visually-hidden/download/@reach/visually-hidden-0.1.4.tgz#0dc4ecedf523004337214187db70a46183bd945b"
   integrity sha1-DcTs7fUjAEM3IUGH23CkYYO9lFs=
 
+"@sentry/browser@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.npm.taobao.org/@sentry/browser/download/@sentry/browser-6.0.3.tgz#699dd9c1f1ba9be9fa3aafd04858c351776eacd6"
+  integrity sha1-aZ3ZwfG6m+n6Oq/QSFjDUXdurNY=
+  dependencies:
+    "@sentry/core" "6.0.3"
+    "@sentry/types" "6.0.3"
+    "@sentry/utils" "6.0.3"
+    tslib "^1.9.3"
+
 "@sentry/core@6.0.3":
   version "6.0.3"
   resolved "https://registry.npm.taobao.org/@sentry/core/download/@sentry/core-6.0.3.tgz#620cb32365a11eac75497bed281bd52b9f0bb359"
@@ -1322,7 +1332,7 @@
     lru_map "^0.3.3"
     tslib "^1.9.3"
 
-"@sentry/tracing@6.0.3":
+"@sentry/tracing@6.0.3", "@sentry/tracing@^6.0.3":
   version "6.0.3"
   resolved "https://registry.npm.taobao.org/@sentry/tracing/download/@sentry/tracing-6.0.3.tgz#103f4942ddd546321e22ba20c011adf52b25b3f2"
   integrity sha1-ED9JQt3VRjIeIrogwBGt9Ssls/I=

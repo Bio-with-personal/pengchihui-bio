@@ -1,10 +1,13 @@
+const Sentry = require("@sentry/node");
+
 // 載入 packages
 import React from 'react'
 import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import { DefaultSeo } from 'next-seo'
 import { withTheme } from 'emotion-theming'
 import Router from 'next/router'
-import * as Sentry from '@sentry/node'
+// import * as Sentry from '@sentry/node'
+// import * as Sentry from '@sentry/browser'
 import Head from 'next/head'
 
 // import App from 'next/app'
@@ -24,7 +27,8 @@ import 'mescroll.js/mescroll.min.css'
 // sentry
 Sentry.init({
   enabled: process.env.NODE_ENV === 'production',
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  // dsn: "https://6604a8d5d0914cf78baca65a38464b71@o514625.ingest.sentry.io/5618097"
 })
 
 // ErrorBoundary component
@@ -166,28 +170,28 @@ export default withTheme(MyApp)
 
 // export default withTheme(withApollo(MyApp))
 
-// initRouterListeners()
+initRouterListeners()
 
-// const ROUTES_TO_RETAIN = ['/school/[schoolId]']
+const ROUTES_TO_RETAIN = ['/peng/[pengId]']
 
-// function initRouterListeners () {
-//   if (typeof window === 'undefined' || window.__initializedRouterListeners) return
-//   window.__initializedRouterListeners = true
+function initRouterListeners() {
+  if (typeof window === 'undefined' || window.__initializedRouterListeners) return
+  window.__initializedRouterListeners = true
 
-//   // console.log('Init router listeners')
+  // console.log('Init router listeners')
 
-//   const routes = []
+  const routes = []
 
-//   Router.events.on('routeChangeStart', (url) => {
-//     routes[Router.pathname] = window.scrollY
-//   })
+  Router.events.on('routeChangeStart', (url) => {
+    routes[Router.pathname] = window.scrollY
+  })
 
-//   Router.events.on('routeChangeComplete', (url) => {
-//     if (ROUTES_TO_RETAIN.includes(Router.pathname)) {
-//       const scrollY = routes[Router.pathname] || 0
-//       // console.log('Scrolling to', scrollY)
-//       window.requestAnimationFrame(() => window.scrollTo(0, scrollY))
-//       // console.log('routes now:', routes)
-//     }
-//   })
-// }
+  Router.events.on('routeChangeComplete', (url) => {
+    if (ROUTES_TO_RETAIN.includes(Router.pathname)) {
+      const scrollY = routes[Router.pathname] || 0
+      // console.log('Scrolling to', scrollY)
+      window.requestAnimationFrame(() => window.scrollTo(0, scrollY))
+      // console.log('routes now:', routes)
+    }
+  })
+}
