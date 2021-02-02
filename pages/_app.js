@@ -27,7 +27,7 @@ import 'mescroll.js/mescroll.min.css'
 // sentry
 Sentry.init({
   enabled: process.env.NODE_ENV === 'production',
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN
   // dsn: "https://6604a8d5d0914cf78baca65a38464b71@o514625.ingest.sentry.io/5618097"
 })
 

@@ -98,5 +98,5 @@ include属性
         "src/**/*"
     ]     
 
- ## 插件
- sentry  日志监控
+ ## 更新 sentry 和 error 的方式
+ https://github.com/vercel/next.js/tree/canary/examples/with-sentry

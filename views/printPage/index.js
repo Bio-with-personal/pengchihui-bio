@@ -21,7 +21,18 @@ const PrintPage = () => {
     return (
         <Layout>
             <Box mt={16} py={4}>
-                <LoadingItem />
+                <Formik
+				initialValues={name:'king'}
+				onSubmit={async (values, { setSubmitting }) => {})}
+				>
+				
+				  {({ isSubmitting, setFieldValue, values }) => {
+                    return (
+		            <Form>  
+					<Box>456789</Box>
+                    </Form>
+				  )}}
+                </Formik>
             </Box>
         </Layout>
     )
