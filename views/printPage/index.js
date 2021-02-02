@@ -34,7 +34,7 @@ const PrintPage = () => {
                     }}
                 </Formik>
             </Box>
-        </Layout >
+        </Box>
     )
 }
 
