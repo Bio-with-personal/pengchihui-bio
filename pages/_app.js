@@ -4,11 +4,8 @@ const Sentry = require("@sentry/node");
 import React from 'react'
 import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import { DefaultSeo } from 'next-seo'
-// import { withTheme } from 'emotion-theming'
 import { useTheme, withTheme } from '@emotion/react'
 import Router from 'next/router'
-// import * as Sentry from '@sentry/node'
-// import * as Sentry from '@sentry/browser'
 import Head from 'next/head'
 
 // import App from 'next/app'
@@ -19,6 +16,7 @@ import Head from 'next/head'
 // import 'react-dates/lib/css/_datepicker.css'
 // import 'react-datepicker/dist/react-datepicker.css'
 // 載入 lib
+
 import theme from 'lib/theme'
 import getSEOConfig from 'lib/seo.config'
 // import withApollo from 'lib/withApollo'
@@ -101,13 +99,12 @@ function MyApp({ Component, pageProps, router, maintenanceMode, err, ...rest }) 
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-
       <ThemeProvider theme={theme}>
         <ColorModeProvider value='light'>
           <RefetchProvider>
             <>
               {/* seo */}
-              <DefaultSeo {...getSEOConfig()} />
+              {/* <DefaultSeo {...getSEOConfig()} /> */}
               {/* page component */}
               {/* <ErrorBoundary> */}
               <Component {...pageProps} err={err} />
