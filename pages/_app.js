@@ -13,52 +13,17 @@ import Head from 'next/head'
 // import App from 'next/app'
 
 // 載入 global 的 css 放這裡
-import 'spinkit/spinkit.min.css'
-import 'video-react/dist/video-react.css'
-import 'react-dates/lib/css/_datepicker.css'
-import 'react-datepicker/dist/react-datepicker.css'
+// import 'spinkit/spinkit.min.css'
+// import 'video-react/dist/video-react.css'
+// import 'react-dates/lib/css/_datepicker.css'
+// import 'react-datepicker/dist/react-datepicker.css'
 // 載入 lib
 import theme from 'lib/theme'
 import getSEOConfig from 'lib/seo.config'
 // import withApollo from 'lib/withApollo'
 import { RefetchProvider } from 'lib/refetchContext'
-import 'mescroll.js/mescroll.min.css'
+// import 'mescroll.js/mescroll.min.css'
 
-// sentry
-Sentry.init({
-  enabled: process.env.NODE_ENV === 'production',
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN
-  // dsn: "https://6604a8d5d0914cf78baca65a38464b71@o514625.ingest.sentry.io/5618097"
-})
-
-// ErrorBoundary component
-// class ErrorBoundary extends React.Component {
-//   constructor (props) {
-//     super(props)
-//     this.state = { hasError: false }
-//   }
-
-//   static getDerivedStateFromError () {
-//     // Update state so the next render will show the fallback UI.
-//     return { hasError: true }
-//   }
-
-//   componentDidCatch (error, errorInfo) {
-//     // You can also log the error to an error reporting service
-//     console.log(error, errorInfo)
-//   }
-
-//   render () {
-//     if (this.state.hasError) {
-//       // You can render any custom fallback UI
-//       return <h1>Something went wrong.</h1>
-//     }
-
-//     return this.props.children
-//   }
-// }
-
-// maintenance screen component
 const MaintenanceScreen = () => (
   <div className='container'>
     <div className='item'>

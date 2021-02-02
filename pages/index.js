@@ -5,11 +5,8 @@ import Router from 'next/router'
 class Index extends React.Component {
   static getInitialProps({ req, res }) {
     if (typeof window === 'undefined' && !res.writeHead) {
-      // This is the SSR mode
       const host = req.headers['x-forwarded-host'] || req.headers.host
-      if (
-        host === 'localhost:3000' ||
-      ) {
+      if (host === 'localhost:3000') {
         return { metaRedirect: '/peng' }
       } else {
         return { metaRedirect: '/peng' }
@@ -18,9 +15,7 @@ class Index extends React.Component {
 
     if (req) {
       const host = req.headers['x-forwarded-host'] || req.headers.host
-      if (
-        host === 'localhost:3000' ||
-      ) {
+      if (host === 'localhost:3000') {
         res.writeHead(302, { Location: '/peng' })
         res.end()
       } else {
@@ -29,28 +24,28 @@ class Index extends React.Component {
       }
     } else {
       const host = window.location.host
-      if (
-        host === 'localhost:3000' ||
-      ) {
+      if (host === 'localhost:3000') {
         Router.push('/peng')
       } else {
         Router.push('/peng')
       }
     }
 
-    return {}
   }
 
-  render() {
-    if (this.props.metaRedirect) {
-      return (
-        <Head>
-          <meta httpEquiv='refresh' content={`0; url=${this.props.metaRedirect}`} />
-        </Head>
-      )
-    }
-    return null
+return {}
   }
+
+render() {
+  if (this.props.metaRedirect) {
+    return (
+      <Head>
+        <meta httpEquiv='refresh' content={`0; url=${this.props.metaRedirect}`} />
+      </Head>
+    )
+  }
+  return null
+}
 }
 
 export default Index

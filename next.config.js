@@ -56,6 +56,6 @@ module.exports = {
     //   )
     // }
     return config
-  },
-  basePath,
+  }
+  // basePath,
 }
