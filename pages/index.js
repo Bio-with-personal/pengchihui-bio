@@ -30,22 +30,19 @@ class Index extends React.Component {
         Router.push('/peng')
       }
     }
-
+    return {}
   }
 
-return {}
+  render() {
+    if (this.props.metaRedirect) {
+      return (
+        <Head>
+          <meta httpEquiv='refresh' content={`0; url=${this.props.metaRedirect}`} />
+        </Head>
+      )
+    }
+    return null
   }
-
-render() {
-  if (this.props.metaRedirect) {
-    return (
-      <Head>
-        <meta httpEquiv='refresh' content={`0; url=${this.props.metaRedirect}`} />
-      </Head>
-    )
-  }
-  return null
-}
 }
 
 export default Index
