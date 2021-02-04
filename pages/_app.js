@@ -2,7 +2,7 @@ const Sentry = require("@sentry/node");
 
 // 載入 packages
 import React from 'react'
-import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
+import { ThemeProvider, ColorModeProvider, CSSReset } from '@chakra-ui/core'
 import { DefaultSeo } from 'next-seo'
 import { useTheme, withTheme } from '@emotion/react'
 import Router from 'next/router'
@@ -111,6 +111,7 @@ function MyApp({ Component, pageProps, router, maintenanceMode, err, ...rest }) 
               {/* </ErrorBoundary> */}
             </>
           </RefetchProvider>
+          <CSSReset />
         </ColorModeProvider>
         {/* 其他 global css 放這裡 */}
         <style jsx global>{`
