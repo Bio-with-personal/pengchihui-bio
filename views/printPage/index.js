@@ -14,7 +14,8 @@ import {
     Divider,
     Radio,
     RadioGroup,
-    IconButton
+    IconButton,
+    Textarea
 } from '@chakra-ui/core'
 import { useState, useEffect } from 'react'
 import { Formik, Form, Field } from 'formik'
@@ -37,7 +38,7 @@ const PrintPage = () => {
         <Box m='0 auto' maxW='800px' py={10}>
             <Text textAlign='center' fontSize='18px' fontWeight={700}>简历列印</Text>
             <Divider mt={10} />
-            <Text fontSize='18px' fontWeight={700}>基本信息</Text>
+            <Text fontSize='18px' fontWeight={700}>个人信息</Text>
             <Divider />
             <Box px={10}>
                 <Flex mt={2} justify='space-between'>
@@ -70,7 +71,20 @@ const PrintPage = () => {
                         <Input placeholder="请输入" />
                     </Flex>
                 </Flex>
-                <Flex align='center' justify='flex-start' mt={2}>
+                <Flex justify='space-between'>
+                    <Flex align='center' justify='flex-start' mt={2}>
+                        <Flex >
+                            <LabelName label='工作经验' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                            <Input placeholder="请输入" />
+                        </Flex>
+
+                    </Flex>
+                    <Flex align='center' mt={2}>
+                        <LabelName label='现住城市' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex justify='flex-start' mt={2}>
                     <LabelName label='年龄' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
                     <Box maxW='400px' className='date-picker-content' border='1px solid #CBD5E0'>
                         <DatePicker
@@ -87,12 +101,11 @@ const PrintPage = () => {
                                 }
                             }}
                             showTimeSelect
-                            // timeIntervals={15}
                             autoComplete='off'
                         />
                     </Box>
                 </Flex>
-                <Flex mt={2}>
+                <Flex mt={2} align='center'>
                     <LabelName label='性别' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
                     <RadioGroup defaultValue={sex} isInline onChange={e => setSex(e.target.value)}  >
                         <Radio value="1">女</Radio>
@@ -101,12 +114,48 @@ const PrintPage = () => {
                 </Flex>
             </Box>
             <Divider mt={10} />
+            <Text textAlign='left' fontSize='18px' fontWeight={700} >求职意向</Text>
+            <Divider />
+            <Flex mt={2} justify='space-between' px={10}>
+                <Flex flexDirection='row' align='center'>
+                    <LabelName label='从事职业' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Input placeholder="请输入" />
+                </Flex>
+                <Flex flexDirection='row' align='center'>
+                    <LabelName label='期望薪资' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Input placeholder="请输入" />
+                </Flex>
+            </Flex>
+            <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >教育背景</Text>
                 <IconButton
                     icon='add'
                 />
             </Flex>
+            <Divider />
+            <Box px={10} >
+                <Flex mt={2} justify='space-between' align='center'>
+                    <Flex  >
+                        <LabelName label='学校名称' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                    <Flex align='center'>
+                        <LabelName label='就读时间' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex mt={2} justify='space-between' align='center' >
+                    <Flex align='center'>
+                        <LabelName label='所学专业' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                    <Flex align='center'>
+                        <LabelName label='学历学位' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+            </Box>
             <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >工作经历</Text>
@@ -114,7 +163,96 @@ const PrintPage = () => {
                     icon='add'
                 />
             </Flex>
-            <Divider mt={10} />
+            <Divider />
+            <Box px={10} >
+                <Flex mt={2} justify='space-between' align='center'>
+                    <Flex  >
+                        <LabelName label='公司名称' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                    <Flex align='center'>
+                        <LabelName label='职位名称' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex mt={2} justify='space-between' align='center' >
+                    <Flex align='center'>
+                        <LabelName label='在职时间' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                    <Flex align='center'>
+                        <LabelName label='税前月薪' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='工作描述' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='工作职责' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='完成业绩' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+            </Box>
+            <Flex align='center' justify='space-between'>
+                <Text fontSize='18px' fontWeight={700} >项目经验</Text>
+                <IconButton
+                    icon='add'
+                />
+            </Flex>
+            <Divider />
+            <Box px={10} >
+                <Flex mt={2} justify='space-between' align='center'>
+                    <Flex  >
+                        <LabelName label='项目名称' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                    <Flex align='center'>
+                        <LabelName label='项目职位' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex mt={2} justify='space-between' align='center' >
+                    <Flex align='center'>
+                        <LabelName label='项目时间' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                        <Input placeholder="请输入" />
+                    </Flex>
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='项目描述' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='项目职责' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+                <Flex mt={2} align='flex-start'>
+                    <LabelName label='项目业绩' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
+                    <Textarea
+                        placeholder="请输入"
+                        size="sm"
+                    />
+                </Flex>
+            </Box>
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >兴趣爱好</Text>
                 <IconButton
@@ -131,25 +269,25 @@ const PrintPage = () => {
             <style jsx global>
                 {`
                     .input{
-                    cursor:pointer;
+                        cursor:pointer;
                     }
                     .date-picker-content button:focus,
                     .input:focus{
-                    outline: none;
+                        outline: none;
                     }
                     .css-6qsuox{
-                    font-size:none !important
+                        font-size:none !important
                     }
                     .date-input:focus{
-                    outline: none;
+                        outline: none;
                     }
                     .react-datepicker__input-container input {
-                    align-items: center;
-                    width: 100%;
-                    display: flex;
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    height: 2rem;
+                        align-items: center;
+                        width: 100%;
+                        display: flex;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        height: 2rem;
                     }
                 `}
             </style>
