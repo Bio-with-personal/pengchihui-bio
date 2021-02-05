@@ -207,6 +207,7 @@ const PrintPage = () => {
                     />
                 </Flex>
             </Box>
+            <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >项目经验</Text>
                 <IconButton
@@ -253,6 +254,7 @@ const PrintPage = () => {
                     />
                 </Flex>
             </Box>
+            <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >兴趣爱好</Text>
                 <IconButton
