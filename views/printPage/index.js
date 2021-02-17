@@ -73,7 +73,7 @@ const PrintPage = () => {
                 </Flex>
                 <Flex justify='space-between'>
                     <Flex align='center' justify='flex-start' mt={2}>
-                        <Flex >
+                        <Flex>
                             <LabelName label='工作经验' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
                             <Input placeholder="请输入" />
                         </Flex>
@@ -129,9 +129,7 @@ const PrintPage = () => {
             <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >教育背景</Text>
-                <IconButton
-                    icon='add'
-                />
+                <IconButton icon='add' />
             </Flex>
             <Divider />
             <Box px={10} >
@@ -159,9 +157,7 @@ const PrintPage = () => {
             <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >工作经历</Text>
-                <IconButton
-                    icon='add'
-                />
+                <IconButton icon='add' />
             </Flex>
             <Divider />
             <Box px={10} >
@@ -187,37 +183,26 @@ const PrintPage = () => {
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='工作描述' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='工作职责' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='完成业绩' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
             </Box>
             <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >项目经验</Text>
-                <IconButton
-                    icon='add'
-                />
+                <IconButton icon='add' />
             </Flex>
             <Divider />
             <Box px={10} >
                 <Flex mt={2} justify='space-between' align='center'>
-                    <Flex  >
+                    <Flex>
                         <LabelName label='项目名称' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
                         <Input placeholder="请输入" />
                     </Flex>
@@ -234,32 +219,21 @@ const PrintPage = () => {
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='项目描述' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='项目职责' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
                 <Flex mt={2} align='flex-start'>
                     <LabelName label='项目业绩' labelProps={{ fontSize: '17px', w: '135px', mr: '0.75rem', alignItems: 'center' }} />
-                    <Textarea
-                        placeholder="请输入"
-                        size="sm"
-                    />
+                    <Textarea placeholder="请输入" size="sm" />
                 </Flex>
             </Box>
             <Divider mt={10} />
             <Flex align='center' justify='space-between'>
                 <Text fontSize='18px' fontWeight={700} >兴趣爱好</Text>
-                <IconButton
-                    icon='add'
-                />
+                <IconButton icon='add' />
             </Flex>
             <Divider />
             <Flex justify='space-around'>
